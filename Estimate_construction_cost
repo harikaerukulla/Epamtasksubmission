@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Epamtask2{
+     public static void main(String []args){
+         
+       int Standard_Material,Above_Standard_Material,High_Standard_Material,Standard=2;
+       boolean Fully_Automated=false;
+       double Total_Area,Construction_Cost=0;
+       System.out.println("press 1 if you want standardmaterial");
+       System.out.println("press 2 if you want abovestandardmaterial");
+       System.out.println("press 3 if you want highstandardmaterial");
+       Scanner sc=new Scanner(System.in);
+       Standard=sc.nextInt();
+       System.out.println("enter total area in sq feet");
+       Total_Area=sc.nextDouble();
+       System.out.print("type true if you want a fully automated house");
+       Fully_Automated=sc.nextBoolean();
+       if(Standard==1)
+       Construction_Cost=1200*Total_Area;
+       else if(Standard==2)
+       Construction_Cost=1500*Total_Area;
+       else if(Standard==3)
+       Construction_Cost=1800*Total_Area;
+       if(Fully_Automated==true)
+       Construction_Cost=Construction_Cost*2500;
+       System.out.print(Construction_Cost);
+     }
+}
+
+
